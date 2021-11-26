@@ -1,0 +1,24 @@
+You need to calculate if it is possible to fuel up a spaceship within the number of seconds allowed(t), given the capacity of the tank (c) in litres, and the number of litres of fuel that can be pumped into its tank per second (r).
+
+The tank starts empty.
+The maximum amount of litres per second (r) is constantly pumped into the tank until it is full.
+Entrée
+Line 1: Three space seperated integers t, c, and r.
+Sortie
+Line 1: An string "yes" or "no". "yes" if it is possible to fill up the spaceship in the time allowed, "no" if it is not possible.
+Contraintes
+0 < t ≤ 10,000
+0 < c ≤ 10,000
+0 < r ≤ 1000
+
+
+var inputs = readline().split(' ');
+const t = parseInt(inputs[0]);//seconds
+const c = parseInt(inputs[1]);//capacity
+const r = parseInt(inputs[2]);//q/s
+let answer = "no"
+// Write an answer using console.log()
+// To debug: console.error('Debug messages...');
+let quantity = t * r;
+if (quantity >= c) answer="yes"
+console.log(answer);
